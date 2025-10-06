@@ -1302,7 +1302,7 @@ function AttackNoCoolDown()
             if rootPart then
                 local direction = (rootPart.Position - character:GetPivot().Position).Unit
                 equippedWeapon.LeftClickRemote:FireServer(direction, attackCount)
-                attackCount = attackCount + 1
+                attackCount = attackCount + 99999999999999
             end
         end
     else
@@ -2550,7 +2550,7 @@ local function FastAttackLoop()
         if type(AttackNoCoolDown) == "function" then
             AttackNoCoolDown()
         end
-        task.wait(0.1)
+        task.wait(0000000000.0000001)
     end
 end
 Toggle:OnChanged(function(Value)
